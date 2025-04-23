@@ -18,7 +18,11 @@ body:
 
         Thank you for choosing BlitzKit to host your mod. Please make sure you have read and comply with [the BlitzKit Code of Conduct](https://blitzkit.app/docs/legal/code-of-conduct/) and [the BlitzKit Content Rules](https://blitzkit.app/docs/legal/content-rules/).
 
-        ## Form
+        <br />
+
+        ## Mod Name
+
+        This is the name of your mod which will show up on Google, the search page, and in embeds. Please ensure this is consistent with the mod files. We recommend you follow proper capitalization rules. See [Learn how to capitalize titles properly](https://www.grammarly.com/blog/punctuation-capitalization/capitalization-in-titles/).
 
   - id: name
     type: input
@@ -26,7 +30,6 @@ body:
       required: true
     attributes:
       label: Mod Name
-      description: This is the name of your mod which will show up on Google, the search page, and in embeds. Please ensure this is consistent with the mod files. We recommend you follow proper capitalization rules. See [Learn how to capitalize titles properly](https://www.grammarly.com/blog/punctuation-capitalization/capitalization-in-titles/).
 
   - type: markdown
     attributes:
@@ -57,7 +60,7 @@ body:
       value: |
         <br />
 
-        ## ID
+        ## Icon
 
         This is the icon that will show up next to your mod name on Google, the search page, and in embeds. We recommend using a 512x512 image with a size of 1MB. Simply drag and drop your image into the box below. Alternatively, you can use the "add files" button.
 
