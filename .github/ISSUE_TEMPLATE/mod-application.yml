@@ -97,7 +97,7 @@ body:
       value: |
         <br />
 
-        ## Website
+        ## Website (Optional)
 
         This is the website that users will have the option to click on. This can be your portfolio, a website for your mod, a GitHub page if your mod is open source, etc.
 
@@ -111,7 +111,7 @@ body:
       value: |
         <br />
 
-        ## Issues
+        ## Issues (Optional)
 
         This is where your users can report issues with your mod. This can be your Discord server, a GitHub issue tracker, a Google form, your website, etc.
 
