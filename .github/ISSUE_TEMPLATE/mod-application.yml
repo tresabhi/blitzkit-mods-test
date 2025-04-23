@@ -37,13 +37,30 @@ body:
       description: This is the icon that will show up next to your mod name on Google, the search page, and in embeds. We recommend using a 512x512 `.webp` image.
       placeholder: Drag and drop an image file in this box or press "add files" below. Do not input text here.
 
+  - type: markdown
+    attributes:
+      value: |
+        <br />
+
+        ## Short Description
+
+        This is the short description that users will see on Google, on the search page, and in embeds. Make sure it's catchy. [Learn how to write good product descriptions](https://wisepops.com/blog/product-descriptions).
+
   - id: short-description
     type: input
     validations:
       required: true
     attributes:
       label: Short Description
-      description: This is the short description that users will see on Google, on the search page, and in embeds. Make sure it's catchy. [Learn how to write good product descriptions](https://wisepops.com/blog/product-descriptions).
+
+  - type: markdown
+    attributes:
+      value: |
+        <br />
+
+        ## Long Description
+
+        This is the long description that users will see when they click on your mod. Markdown is supported. [Learn how to write pretty documents with Markdown](https://www.markdownguide.org/).
 
   - id: long-description
     type: textarea
@@ -51,13 +68,11 @@ body:
       required: true
     attributes:
       label: Long Description
-      description: This is the long description that users will see when they click on your mod. Markdown is supported. [Learn how to write pretty documents with Markdown](https://www.markdownguide.org/).
       render: markdown
 
   - type: markdown
     attributes:
       value: |
-        <br />
         <br />
 
         ## Containers
