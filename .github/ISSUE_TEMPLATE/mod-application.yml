@@ -32,7 +32,7 @@ body:
     attributes:
       label: Icon
       description: This is the icon that will show up next to your mod name. Drag and drop an image in the box below or press "add files" below the box.
-      placeholder: Drag and drop an image in the box below or press "add files" below the box.
+      placeholder: Drag and drop an image in this box or press "add files" below the box.
 
   - id: short-description
     type: input
