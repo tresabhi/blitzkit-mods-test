@@ -25,6 +25,14 @@ body:
       label: Mod Name
       description: This is the name of your mod which will show up whenever searched or embedded. Please ensure this is consistent with the mod files. We recommend you follow proper capitalization rules. See [Learn how to capitalize titles properly](https://www.grammarly.com/blog/punctuation-capitalization/capitalization-in-titles/).
 
+  - id: icon
+    type: textarea
+    validations:
+      required: true
+    attributes:
+      label: Icon
+      description: This is the icon that will show up next to your mod name. Drag and drop an image in the box below.
+
   - id: short-description
     type: input
     validations:
