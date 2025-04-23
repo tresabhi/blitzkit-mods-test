@@ -14,19 +14,27 @@ body:
       value: |
         Thank you for choosing BlitzKit to host your mods. Please make sure you have read and comply with [the BlitzKit Code of Conduct](https://blitzkit.app/docs/legal/code-of-conduct/) and [the BlitzKit Content Rules](https://blitzkit.app/docs/legal/content-rules/). Do not edit the title above.
 
-  - type: input
-    id: name
+  - id: name
+    type: input
+    validations:
+      required: true
     attributes:
       label: Mod Name
       description: This is the name of your mod which will show up whenever searched or embedded. Please ensure this is consistent with the mod files. We recommend you follow proper capitalization rules. See [Grammarly's article on this](https://www.grammarly.com/blog/punctuation-capitalization/capitalization-in-titles/).
+
+  - id: short-description
+    type: input
     validations:
       required: true
+    attributes:
+      label: Short Description
+      description: This is the short description that users will see on the search page, on Google, and in embeds. Make sure it's catchy. [Learn how to write good product descriptions](https://wisepops.com/blog/product-descriptions).
 
-  - type: textarea
-    id: long-description
+  - id: long-description
+    type: textarea
+    validations:
+      required: true
     attributes:
       label: Long Description
       description: This is the long description that users will see when they click on your mod. Markdown is supported. [Learn how to write pretty documents with Markdown](https://www.markdownguide.org/).
       render: md
-    validations:
-      required: true
