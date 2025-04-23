@@ -52,7 +52,7 @@ body:
     attributes:
       label: Long Description
       description: This is the long description that users will see when they click on your mod. Markdown is supported. [Learn how to write pretty documents with Markdown](https://www.markdownguide.org/).
-      render: md
+      render: markdown
 
   - id: containers
     type: textarea
