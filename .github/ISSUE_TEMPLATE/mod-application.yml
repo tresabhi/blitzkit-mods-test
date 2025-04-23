@@ -57,7 +57,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        ---
+        <br />
+        <br />
 
         ## Containers
 
