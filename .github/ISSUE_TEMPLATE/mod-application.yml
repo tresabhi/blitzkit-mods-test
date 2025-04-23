@@ -28,6 +28,30 @@ body:
       label: Mod Name
       description: This is the name of your mod which will show up on Google, the search page, and in embeds. Please ensure this is consistent with the mod files. We recommend you follow proper capitalization rules. See [Learn how to capitalize titles properly](https://www.grammarly.com/blog/punctuation-capitalization/capitalization-in-titles/).
 
+  - type: markdown
+    attributes:
+      value: |
+        <br />
+
+        ## ID
+
+        This is the ID of your mod which users will be directed to. You can set this once so please be careful of what you choose. Please ensure your URL follows kebab-case. [Learn how to use kebab-case](https://developer.mozilla.org/docs/Glossary/Kebab_case).
+
+        Examples:
+
+        | ID                | Resulting URL                               |
+        | ----------------- | ------------------------------------------- |
+        | `your-mod-name`   | `https://blitzkit.app/mods/your-mod-name`   |
+        | `my-awesome-mod`  | `https://blitzkit.app/mods/my-awesome-mod`  |
+        | `3-in-1-skin-mod` | `https://blitzkit.app/mods/3-in-1-skin-mod` |
+
+  - id: id
+    type: input
+    validations:
+      required: true
+    attributes:
+      label: ID
+
   - id: icon
     type: textarea
     validations:
