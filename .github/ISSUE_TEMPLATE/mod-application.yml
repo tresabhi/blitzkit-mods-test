@@ -52,14 +52,23 @@ body:
     attributes:
       label: ID
 
+  - type: markdown
+    attributes:
+      value: |
+        <br />
+
+        ## ID
+
+        This is the icon that will show up next to your mod name on Google, the search page, and in embeds. We recommend using a 512x512 image with a size of 1MB. Simply drag and drop your image into the box below. Alternatively, you can use the "add files" button.
+
+        <img src="https://i.imgur.com/UGlNWV1.gif" width="320px" />
+
   - id: icon
     type: textarea
     validations:
       required: true
     attributes:
       label: Icon
-      description: This is the icon that will show up next to your mod name on Google, the search page, and in embeds. We recommend using a 512x512 `.webp` image.
-      placeholder: Drag and drop an image file in this box or press "add files" below. Do not input text here.
 
   - type: markdown
     attributes:
