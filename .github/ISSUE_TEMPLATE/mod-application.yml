@@ -18,6 +18,8 @@ body:
 
         Thank you for choosing BlitzKit to host your mod. Please make sure you have read and comply with [the BlitzKit Code of Conduct](https://blitzkit.app/docs/legal/code-of-conduct/) and [the BlitzKit Content Rules](https://blitzkit.app/docs/legal/content-rules/).
 
+        Your GitHub account will be credited as the author of the mod. [Look pretty](https://docs.github.com/en/get-started/start-your-journey/setting-up-your-profile), upload a good profile picture, and choose a great display name before you apply. Please do not change your GitHub username after applying (feel free to update your display name though).
+
         <br />
 
         ## Mod Name
@@ -89,6 +91,34 @@ body:
       required: true
     attributes:
       label: Short Description
+
+  - type: markdown
+    attributes:
+      value: |
+        <br />
+
+        ## Website
+
+        This is the website that users will have the option to click on. This can be your portfolio, a website for your mod, a GitHub page if your mod is open source, etc.
+
+  - id: website
+    type: input
+    attributes:
+      label: Website
+
+  - type: markdown
+    attributes:
+      value: |
+        <br />
+
+        ## Issues
+
+        This is where your users can report issues with your mod. This can be your Discord server, a GitHub issue tracker, a Google form, your website, etc.
+
+  - id: issues
+    type: input
+    attributes:
+      label: Issues
 
   - type: markdown
     attributes:
