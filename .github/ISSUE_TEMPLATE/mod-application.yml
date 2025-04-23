@@ -12,9 +12,13 @@ body:
   - type: markdown
     attributes:
       value: |
-        # DO NOT EDIT THE TITLE ABOVE.
+        # BlitzKit Mod Application
+
+        **DO NOT EDIT THE TITLE ABOVE.** Leave it as `[Mod Application]`.
 
         Thank you for choosing BlitzKit to host your mod. Please make sure you have read and comply with [the BlitzKit Code of Conduct](https://blitzkit.app/docs/legal/code-of-conduct/) and [the BlitzKit Content Rules](https://blitzkit.app/docs/legal/content-rules/).
+
+        ## Form
 
   - id: name
     type: input
