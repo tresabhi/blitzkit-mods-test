@@ -12,7 +12,10 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thank you for choosing BlitzKit to host your mods. Please make sure you have read and comply with [the BlitzKit Code of Conduct](https://blitzkit.app/docs/legal/code-of-conduct/) and [the BlitzKit Content Rules](https://blitzkit.app/docs/legal/content-rules/). Do not edit the title above.
+        Thank you for choosing BlitzKit to host your mod. Please make sure you have read and comply with [the BlitzKit Code of Conduct](https://blitzkit.app/docs/legal/code-of-conduct/) and [the BlitzKit Content Rules](https://blitzkit.app/docs/legal/content-rules/).
+
+        > [!IMPORTANT]
+        > Do not edit the title above. Do not edit this issue after submitting it.
 
   - id: name
     type: input
@@ -20,7 +23,7 @@ body:
       required: true
     attributes:
       label: Mod Name
-      description: This is the name of your mod which will show up whenever searched or embedded. Please ensure this is consistent with the mod files. We recommend you follow proper capitalization rules. See [Grammarly's article on this](https://www.grammarly.com/blog/punctuation-capitalization/capitalization-in-titles/).
+      description: This is the name of your mod which will show up whenever searched or embedded. Please ensure this is consistent with the mod files. We recommend you follow proper capitalization rules. See [Learn how to capitalize titles properly](https://www.grammarly.com/blog/punctuation-capitalization/capitalization-in-titles/).
 
   - id: short-description
     type: input
