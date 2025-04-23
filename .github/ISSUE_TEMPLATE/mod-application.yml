@@ -16,9 +16,9 @@ body:
 
         **DO NOT EDIT THE TITLE ABOVE.** Leave it as `[Mod Application]`.
 
-        Thank you for choosing BlitzKit to host your mod. Please make sure you have read and comply with [the BlitzKit Code of Conduct](https://blitzkit.app/docs/legal/code-of-conduct/) and [the BlitzKit Content Rules](https://blitzkit.app/docs/legal/content-rules/).
+        Thank you for choosing BlitzKit to host your mod. Make sure you have read and comply with [the BlitzKit Code of Conduct](https://blitzkit.app/docs/legal/code-of-conduct/) and [the BlitzKit Content Rules](https://blitzkit.app/docs/legal/content-rules/).
 
-        Your GitHub account will be credited as the author of the mod. [Look pretty](https://docs.github.com/en/get-started/start-your-journey/setting-up-your-profile), upload a good profile picture, and choose a great display name before you apply. Please do not change your GitHub username after applying (feel free to update your display name though).
+        Your GitHub account will be credited as the author of the mod. [Look pretty](https://docs.github.com/en/get-started/start-your-journey/setting-up-your-profile), upload a good profile picture, and choose a great display name before you apply. Do not change your GitHub username after applying (feel free to update your display name though).
 
         <br />
 
@@ -40,7 +40,7 @@ body:
 
         ## ID
 
-        This is the ID of your mod which users will be directed to. You cannot change this later so please be careful of what you choose. Ensure your ID follows kebab-case. [Learn how to use kebab-case](https://developer.mozilla.org/docs/Glossary/Kebab_case).
+        This is the ID of your mod which users will be directed to. You cannot change this later so be careful of what you choose. Ensure your ID follows kebab-case and is similar to your mod name. [Learn how to use kebab-case](https://developer.mozilla.org/docs/Glossary/Kebab_case).
 
         Examples:
 
