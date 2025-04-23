@@ -72,6 +72,7 @@ body:
       required: true
     attributes:
       label: Icon
+      placeholder: Upload files here.
 
   - type: markdown
     attributes:
