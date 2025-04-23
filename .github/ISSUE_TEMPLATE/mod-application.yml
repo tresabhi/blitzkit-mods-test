@@ -1,0 +1,23 @@
+name: Mod Application
+description: Apply to distribute your mod on BlitzKit Mods. Do not tamper with the template.
+
+labels: ["mod", "application"]
+projects: ["tresabhi/8"]
+assignees:
+  - tresabhi
+
+title: [Mod Application]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for choosing BlitzKit to host your mods. Please make sure you have read and comply with [the BlitzKit Code of Conduct](https://blitzkit.app/docs/legal/code-of-conduct/) and [the BlitzKit Content Rules](https://blitzkit.app/docs/legal/content-rules/).
+
+  - type: input
+    id: name
+    attributes:
+      label: Mod Name
+      description: We recommend you follow proper capitalization rules. See [Grammarly's article on this](https://www.grammarly.com/blog/punctuation-capitalization/capitalization-in-titles/).
+    validations:
+      required: true
