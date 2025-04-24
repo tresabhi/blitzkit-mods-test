@@ -14,6 +14,11 @@ export enum Check {
   IdStartsWithAlphanumeric,
   IdEndsWithAlphanumeric,
   IdHasNoRepeatedDashes,
+
+  IconHasOneAttachment,
+  IconIsPNG,
+  IconIsBelowMaxFileSize,
+  IconIsAboveMinResolution,
 }
 
 export interface CheckComment {

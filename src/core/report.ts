@@ -17,6 +17,10 @@ const checkMessages: Record<Check, string> = {
   [Check.IdStartsWithAlphanumeric]: "ID starts with an alphanumeric",
   [Check.IdEndsWithAlphanumeric]: "ID ends with an alphanumeric",
   [Check.IdHasNoRepeatedDashes]: "ID has no repeated dashes",
+  [Check.IconHasOneAttachment]: "Icon has one attachment",
+  [Check.IconIsPNG]: "Icon is a PNG",
+  [Check.IconIsBelowMaxFileSize]: "Icon is below 1MB",
+  [Check.IconIsAboveMinResolution]: "Icon is at least 256x256 pixels",
 };
 
 export function report(passed: Check[], failed: CheckComment[]) {
@@ -28,9 +32,6 @@ export function report(passed: Check[], failed: CheckComment[]) {
   ) as Check[];
 
   const body = [
-    `## Passed ${passed.length} Checks`,
-    ...passed.map((check) => `✅ ${checkMessages[check]}`),
-
     `## Failed ${failed.length} Checks`,
     ...failed.map(
       (check) =>
@@ -39,8 +40,12 @@ export function report(passed: Check[], failed: CheckComment[]) {
         }`
     ),
 
+    `## Passed ${passed.length} Checks`,
+    ...passed.map((check) => `✅ ${checkMessages[check]}`),
+
     `## Skipped ${skipped.length} Checks`,
-    ...skipped.map((check) => `⚠️ ${checkMessages[check]}`),
+    "These checks were skipped because they either don't apply to you or other checks failed before them.",
+    ...skipped.map((check) => `~~${checkMessages[check]}~~`),
   ].join("\n\n");
 
   return body;

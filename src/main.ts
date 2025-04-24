@@ -7,6 +7,8 @@ import { report } from "./core/report.ts";
 const markdown = await Deno.readTextFile("test.md");
 const tokens = marked.lexer(markdown).filter((token) => token.type !== "space");
 
+// console.log(tokens.map((token) => token.type));
+
 const passed: Check[] = [];
 const failed: CheckComment[] = [];
 
@@ -37,8 +39,13 @@ try {
       return value as Token & { type: T };
     };
 
-    const test = (result: boolean, check: Check | CheckComment) => {
+    const test = (
+      result: boolean,
+      check: Check | CheckComment,
+      pushToPassed = true
+    ) => {
       if (result) {
+        if (!pushToPassed) return;
         passed.push(typeof check === "number" ? check : check.check);
       } else {
         failed.push(typeof check === "number" ? { check } : check);
@@ -50,12 +57,7 @@ try {
       case "Mod Name": {
         const paragraph = expect("paragraph");
 
-        if (typeof paragraph.text === "string") {
-          passed.push(Check.ModNameIsString);
-        } else {
-          failed.push({ check: Check.ModNameIsString });
-          throw new BreakError();
-        }
+        test(typeof paragraph.text === "string", Check.ModNameIsString);
 
         test(paragraph.text.trim() === paragraph.text, Check.ModNameIsTrimmed);
 
@@ -71,12 +73,7 @@ try {
       case "ID": {
         const paragraph = expect("paragraph");
 
-        if (typeof paragraph.text === "string") {
-          passed.push(Check.IdIsString);
-        } else {
-          failed.push({ check: Check.IdIsString });
-          throw new BreakError();
-        }
+        test(typeof paragraph.text === "string", Check.IdIsString);
 
         test(paragraph.text.trim() === paragraph.text, Check.IdIsTrimmed);
 
@@ -98,6 +95,50 @@ try {
         break;
       }
 
+      case "Icon": {
+        const paragraph = expect("paragraph");
+
+        test(
+          paragraph.tokens !== undefined && paragraph.tokens.length === 1,
+          Check.IconHasOneAttachment
+        );
+
+        if (
+          paragraph.tokens === undefined ||
+          paragraph.tokens[0].type !== "image"
+        ) {
+          failed.push({ check: Check.IconIsPNG });
+          throw new BreakError();
+        }
+
+        const response = await fetch(paragraph.tokens[0].href);
+        const contentType = response.headers.get("content-type");
+
+        test(contentType === "image/png", {
+          check: Check.IconIsPNG,
+          comment: `Expected a PNG but got ${contentType}`,
+        });
+
+        const buffer = await response.arrayBuffer();
+
+        test(buffer.byteLength <= 2 ** 20, {
+          check: Check.IconIsBelowMaxFileSize,
+          comment: `Expected a file size below 1MB but got ${Math.round(
+            buffer.byteLength * 2 ** -20
+          )}MB`,
+        });
+
+        const blob = new Blob([buffer], { type: "image/png" });
+        const image = await createImageBitmap(blob);
+
+        test(image.width >= 256 && image.height >= 256, {
+          check: Check.IconIsAboveMinResolution,
+          comment: `Expected a resolution of at least 256x256 pixels but got ${image.width}x${image.height} pixels`,
+        });
+
+        break;
+      }
+
       default: {
         failed.push({
           check: Check.FormIsValid,
@@ -109,7 +150,7 @@ try {
   }
 } catch (error) {
   if (!(error instanceof BreakError)) {
-    // TODO: apologize
+    console.error(error);
   }
 }
 
